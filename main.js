@@ -151,3 +151,29 @@ console.log(students[1]);
 // for(let i=0; i < students.length; i++) {
 //     containerRef.innerHTML += student(students[i].name, students.[i].class, students[i].info);
 //     }
+
+//          **************              *******************                 *************
+
+
+//  //Part two of example:
+// const h1 = () => {
+//       // return `<h1 class="xx-large">Marcus Fulbright</h1>`; The code below is doing what this line originally did in part 1
+// const h1Element = document.createElement('h1');
+// h1Element.textContent = title;
+// h1Element.classList.add(style);
+// return h1Element;        <-- At this point the function is returning a DOM component or element itself; we cannot mix HTML and elements created in this way; to use this, we have to change containerRef.innerHTML (from line 152) to containerRef.appendChild (line 168)
+//}
+
+// for (let i=0; i < students.length; i++) {
+//     containerRef.appendChild(student(students[i].name, etc.));
+// }
+
+
+//See lines 38-39; They are the functions that create the DOM components. In order to use the new code, we must append them with the following info:
+
+// const section (title, style) => {
+//     const sectionElement = document.createElement("section");
+//     sectionElement.textContent = title;     <-- You must add these two sections
+//     sectionElement.classList.add(style);    <-- for each new HTML component
+//     return sectionElement
+// }
